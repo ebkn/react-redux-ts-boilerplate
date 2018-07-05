@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "noImplicitAny": false,
+    "removeComments": true,
+    "allowJs": true
+  },
+  "awesomeTypescriptLoaderOptions": {
+    "useCache": true,
+    "useBabel": true,
+    "babelOptions": {
+      "babelrc": false,
+      "presets": ["@babel/preset-es2017"]
+    },
+    "babelCore": "@babel/core",
+    "reportFiles": [
+      "src/**/*.{ts,tsx}"
+    ]
+  }
+}
