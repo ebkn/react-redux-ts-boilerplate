@@ -1,5 +1,5 @@
 // import states here
 // ex) article: ArticleState
 
-export type RootState = {
-};
+// tslint:disable-next-line:interface-over-type-literal
+export type RootState = {};
