@@ -1,5 +1,7 @@
 # react-redux-ts-boilerplate
 
+[![Build Status](https://travis-ci.org/ebkn/react-redux-ts-boilerplate.svg?branch=master)](https://travis-ci.org/ebkn/react-redux-ts-boilerplate)
+
 This is a boilerplate for developing SPA using React + Redux + TypeScript + Webpack.
 
 For type safe actions, I use [typescript-fsa](https://github.com/aikoven/typescript-fsa), [typescript-fsa-reducers](https://github.com/dphilipson/typescript-fsa-reducers).
