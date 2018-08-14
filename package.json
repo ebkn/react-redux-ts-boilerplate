@@ -8,6 +8,7 @@
   "private": true,
   "scripts": {
     "start": "webpack-dev-server --watch --progress",
+    "build": "webpack",
     "lint": "tslint './src/**/*.ts{,x}'"
   },
   "dependencies": {

@@ -1,2 +1,5 @@
 /node_modules
+.awcache
 .yarn-error.log
+public/main.js
+public/main.js.map
