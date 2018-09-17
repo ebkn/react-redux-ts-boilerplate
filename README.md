@@ -16,6 +16,7 @@ $ yarn
 
 $ yarn start
 ```
+
 ## Sample codes
 ### state.ts
 ```js
@@ -30,7 +31,14 @@ export type RootState = {
 ```js
 import { combineReducers, createStore, applyMiddleware } from 'redux';
 import * as thunk from 'redux-thunk';
-import { composeWithDevTools } from 'redux-devtools-extension';
+
+let composeWithDevTools: any;
+if (process.env.NODE_ENV !== 'development') {
+  composeWithDevTools = require('redux-devtools-extension/logOnlyInProduction').composeWithDevTools;
+} else {
+  composeWithDevTools = require('redux-devtools-extension').composeWithDevTools;
+}
+
 import { RootState } from './state';
 import { authReducer } from './reducers/auth';
 import { articleReducer } from './reducers/article';
