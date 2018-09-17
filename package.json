@@ -25,6 +25,7 @@
     "@types/react-router-dom": "^4.3.1",
     "autoprefixer": "^9.1.5",
     "babel-loader": "^8.0.2",
+    "concurrently": "^4.0.1",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-redux": "^5.0.7",
