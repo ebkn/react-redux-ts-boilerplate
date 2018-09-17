@@ -21,6 +21,7 @@ module.exports = {
           options: {
             presets: [
               '@babel/env',
+              '@babel/react',
               '@babel/typescript',
             ],
             plugins: [
