@@ -13,3 +13,7 @@ node_modules/
 # Ignore built files
 public/main.js
 public/main.js.map
+
+# Ignore editor settings
+/.idea
+/.vscode
