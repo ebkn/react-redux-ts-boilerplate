@@ -1,8 +1,10 @@
+'use strict';
+
 const path = require('path');
-const { CheckerPlugin } = require('awesome-typescript-loader');
+const env = process.env.NODE_ENV || 'development';
 
 module.exports = {
-  mode: 'development',
+  mode: env,
   entry: './src/index.tsx',
   output: {
     path: path.resolve(__dirname, 'public'),
@@ -12,22 +14,31 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(tsx?|js)$/,
+        test: /\.(tsx?|jsx?)$/,
         exclude: /node_modules/,
         use: {
-          loader: 'awesome-typescript-loader',
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              '@babel/env',
+              '@babel/typescript',
+            ],
+            plugins: [
+              '@babel/proposal-class-properties',
+              '@babel/proposal-object-rest-spread',
+            ],
+          },
         },
       },
     ],
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
   devtool: 'source-map',
   devServer: {
     contentBase: path.resolve(__dirname, 'public'),
     historyApiFallback: true,
   },
-  plugins: [new CheckerPlugin()]
 };
 
