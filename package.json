@@ -7,9 +7,16 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "webpack-dev-server --watch --progress",
+    "typecheck": "tsc --noEmit",
+    "prestart": "yarn typecheck",
+    "start": "concurrently \"yarn webpack:dev\" \"yarn tsserver\"",
+    "webpack:dev": "webpack-dev-server --watch --progress",
+    "tsserver": "tsc --watch",
+    "prebuild": "yarn typecheck",
     "build": "webpack",
+    "prelint": "yarn typecheck",
     "lint": "tslint './src/**/*.ts{,x}'",
+    "prelint:fix": "yarn typecheck",
     "lint:fix": "tslint --fix './src/**/*.ts{,x}'"
   },
   "dependencies": {
