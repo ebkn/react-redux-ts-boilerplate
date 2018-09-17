@@ -1,5 +1,15 @@
-/node_modules
-.awcache
-.yarn-error.log
+# Logs
+logs
+*.log
+yarn-debug.log*
+yarn-error.log*
+
+# Coverage directory used by tools like istanbul
+coverage
+
+# Dependency directories
+node_modules/
+
+# Ignore built files
 public/main.js
 public/main.js.map
