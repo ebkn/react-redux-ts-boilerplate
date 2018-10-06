@@ -5,8 +5,11 @@ import { Dispatch, Action } from 'redux';
 import 'normalize.css';
 import { RootState } from '../state';
 
+/* tslint:disable-next-line:no-empty-interface */
 interface StateProps {}
+/* tslint:disable-next-line:no-empty-interface */
 interface DispatchProps {}
+/* tslint:disable-next-line:no-empty-interface */
 interface Props extends StateProps, DispatchProps {}
 
 class App extends React.Component<Props> {
