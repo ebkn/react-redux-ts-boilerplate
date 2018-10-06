@@ -14,7 +14,7 @@ if (process.env.NODE_ENV !== 'development') {
 import { RootState } from './state';
 // import reducers here
 // ex) article: ArticleReducer
-import App from './containers/App';
+import App from './containers/app';
 
 const store = createStore(combineReducers<RootState>({}), composeWithDevTools(applyMiddleware(thunk.default)));
 
