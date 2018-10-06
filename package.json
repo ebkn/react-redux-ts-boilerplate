@@ -1,7 +1,7 @@
 {
   "name": "react-redux-ts-boilerplate",
   "version": "0.0.1",
-  "description": "",
+  "description": "Boilerplate for typesafe React + Redux + Typescript.",
   "main": "src/index.tsx",
   "author": "ebkn",
   "license": "MIT",
