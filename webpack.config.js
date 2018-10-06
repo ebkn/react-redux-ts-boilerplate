@@ -30,7 +30,6 @@ module.exports = {
                       'not op_mini all',
                     ],
                   },
-                  'useBuiltIns': 'usage',
                 },
               ],
               '@babel/react',
@@ -53,7 +52,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js'],
+    extensions: ['.ts', '.tsx', '.js', '.css'],
   },
   devtool: 'source-map',
   devServer: {
