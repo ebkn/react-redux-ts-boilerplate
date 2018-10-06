@@ -3,14 +3,14 @@
     "extends": [
       "tslint:recommended",
       "tslint-config-airbnb",
-      "tslint-react"
+      "tslint-react",
+      "tslint-config-prettier"
     ],
-    "jsRules": {},
+    "rulesDirectory": ["tslint-plugin-prettier"],
     "rules": {
+      "prettier": true,
       "no-any": false,
-       // tslint-react
       "jsx-no-multiline-js": false,
       "jsx-no-lambda": false
-    },
-    "rulesDirectory": []
+    }
 }
