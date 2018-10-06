@@ -11,6 +11,11 @@
       "prettier": true,
       "no-any": false,
       "jsx-no-multiline-js": false,
-      "jsx-no-lambda": false
+      "jsx-no-lambda": false,
+      "interface-name": [true, "never-prefix"],
+      "variable-name": [true, "allow-pascal-case"],
+      "import-name": false,
+      "ordered-imports": false,
+      "no-boolean-literal-compare": false
     }
 }
