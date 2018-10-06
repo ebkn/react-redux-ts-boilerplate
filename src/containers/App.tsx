@@ -1,11 +1,13 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { Dispatch } from 'redux';
+import { Dispatch, Action } from 'redux';
 import 'normalize.css';
 import { RootState } from '../state';
 
-type Props = ReturnType<typeof mapStateToProps> & ReturnType<typeof mapDispatchToProps>;
+interface StateProps {}
+interface DispatchProps {}
+interface Props extends StateProps, DispatchProps {}
 
 class App extends React.Component<Props> {
   public render() {
@@ -22,8 +24,8 @@ class App extends React.Component<Props> {
   }
 }
 
-const mapStateToProps = (state: RootState) => ({});
-const mapDispatchToProps = (dispatch: Dispatch<any>) => ({});
+const mapStateToProps = (state: RootState): StateProps => ({});
+const mapDispatchToProps = (dispatch: Dispatch<Action<{}>>): DispatchProps => ({});
 export default connect(
   mapStateToProps,
   mapDispatchToProps
