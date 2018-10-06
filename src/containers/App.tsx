@@ -14,7 +14,7 @@ class App extends React.Component<Props> {
     return (
       <BrowserRouter>
         <Switch>
-          <Route exact={true} path="/" render={() => <div>hello</div>} />
+          <Route exact={true} path="/" render={routeProps => <div {...routeProps}>hello</div>} />
           <Route>
             <h2>Page Not Found</h2>
           </Route>
