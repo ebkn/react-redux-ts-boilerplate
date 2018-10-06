@@ -18,6 +18,23 @@ $ yarn start
 ```
 
 ## Sample codes
+### index.tsx
+```js
+...
+import { RootState } from './state';
+import { authReducer } from './reducers/auth';
+import { articleReducer } from './reducers/article';
+
+const store = createStore(
+  combineReducers<RootState>({
+    auth: authReducer,
+    article: articleReducer,
+  }),
+  composeWithDevTools(applyMiddleware(thunk.default)),
+);
+...
+```
+
 ### state.ts
 ```js
 import { ArticleState } from './reducers/article';
@@ -25,30 +42,6 @@ import { ArticleState } from './reducers/article';
 export type RootState = {
   article: ArticleState;
 };
-```
-
-### store.ts
-```js
-import { combineReducers, createStore, applyMiddleware } from 'redux';
-import * as thunk from 'redux-thunk';
-
-let composeWithDevTools: any;
-if (process.env.NODE_ENV !== 'development') {
-  composeWithDevTools = require('redux-devtools-extension/logOnlyInProduction').composeWithDevTools;
-} else {
-  composeWithDevTools = require('redux-devtools-extension').composeWithDevTools;
-}
-
-import { RootState } from './state';
-import { authReducer } from './reducers/auth';
-import { articleReducer } from './reducers/article';
-
-export const store = createStore(
-  combineReducers<RootState>({
-    article: articleReducer,
-  }),
-  composeWithDevTools(applyMiddleware(thunk.default)),
-);
 ```
 
 ### `/actions`
@@ -117,6 +110,3 @@ export const articleReducer = reducerWithInitialState(initialState)
     });
   }
 ```
-
-## License
-MIT
