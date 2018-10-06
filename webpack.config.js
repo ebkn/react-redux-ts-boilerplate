@@ -14,13 +14,25 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(tsx?|jsx?)$/,
+        test: /\.tsx?$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
           options: {
             presets: [
-              '@babel/env',
+              [
+                '@babel/env',
+                {
+                  'targets': {
+                    'browsers': [
+                      '>0.25%',
+                      'not ie 11',
+                      'not op_mini all',
+                    ],
+                  },
+                  'useBuiltIns': 'usage',
+                },
+              ],
               '@babel/react',
               '@babel/typescript',
             ],
@@ -34,7 +46,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.jsx'],
+    extensions: ['.ts', '.tsx', '.js'],
   },
   devtool: 'source-map',
   devServer: {
@@ -42,4 +54,3 @@ module.exports = {
     historyApiFallback: true,
   },
 };
-
