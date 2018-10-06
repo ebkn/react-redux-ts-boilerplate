@@ -17,7 +17,9 @@
     "prelint": "yarn typecheck",
     "lint": "tslint './src/**/*.ts{,x}'",
     "prelint:fix": "yarn typecheck",
-    "lint:fix": "tslint --fix './src/**/*.ts{,x}'"
+    "lint:fix": "tslint --fix './src/**/*.ts{,x}'",
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "build-storybook": "build-storybook -c .storybook"
   },
   "dependencies": {
     "@babel/core": "^7.0.1",
