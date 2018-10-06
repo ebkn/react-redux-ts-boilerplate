@@ -16,10 +16,7 @@ import { RootState } from './state';
 // ex) article: ArticleReducer
 import App from './containers/App';
 
-const store = createStore(
-  combineReducers<RootState>({}),
-  composeWithDevTools(applyMiddleware(thunk.default)),
-);
+const store = createStore(combineReducers<RootState>({}), composeWithDevTools(applyMiddleware(thunk.default)));
 
 ReactDOM.render(
   <Provider store={store}>

@@ -24,5 +24,6 @@ class App extends React.Component<Props> {
 const mapStateToProps = (state: RootState) => ({});
 const mapDispatchToProps = (dispatch: Dispatch<any>) => ({});
 export default connect(
-  mapStateToProps, mapDispatchToProps,
+  mapStateToProps,
+  mapDispatchToProps
 )(App);
