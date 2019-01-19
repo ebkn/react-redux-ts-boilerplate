@@ -34,7 +34,7 @@
     "@types/react-redux": "^6.0.9",
     "@types/react-router-dom": "^4.3.1",
     "autoprefixer": "^9.1.5",
-    "babel-loader": "^8.0.2",
+    "babel-loader": "^8.0.5",
     "concurrently": "^4.0.1",
     "css-loader": "^1.0.0",
     "normalize.css": "^8.0.1",
