@@ -14,6 +14,8 @@
     "tsserver": "tsc --watch",
     "prebuild": "yarn typecheck",
     "build": "webpack",
+    "prebuild:prod": "yarn typecheck",
+    "build:prod": "webpack --mode production",
     "prelint": "yarn typecheck",
     "lint": "tslint './src/**/*.ts{,x}'",
     "prelint:fix": "yarn typecheck",
