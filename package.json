@@ -55,7 +55,7 @@
     "tslint-config-prettier": "^1.17.0",
     "tslint-plugin-prettier": "^2.0.0",
     "tslint-react": "^3.6.0",
-    "typescript": "^3.3.1",
+    "typescript": "^3.4.5",
     "typescript-fsa": "^3.0.0-beta-2",
     "typescript-fsa-reducers": "^1.2.0",
     "webpack": "^4.29.0",
